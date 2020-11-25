@@ -1,8 +1,8 @@
 import requests
 
-path = '/Users/kevin/Documents/Wallpapers/unsplash/'
+path = 'Paste/your/path/here/'
 
-unsplash_Access_Key = 'Ei0oguAWeJ3QsgGQuWyrwUVCnrlTtnwOMBAYiXGDG_k'
+unsplash_Access_Key = 'PasteYourUnsplashAPIKeyHere'
 
 
 keyword = input('Enter search term: ')
@@ -37,13 +37,13 @@ def dowloadImages(LorP):
     count = 0
     for pages in range(0,100):  #range is 100 incase there arent enough images in a given page to meet requirements of desired number of pictures
         
-        if count == numPics: #if desired number of pictures are downloaded breaks loop
+        if count == numPics: #if desired number of pictures are downloaded, break loop
             break
         
         data = apiData(pages+1)
         
         for i in range(0,30):
-            if count == numPics:   #if desired number of pictures are downloaded breaks loop
+            if count == numPics:   #if desired number of pictures are downloaded, breaks loop
                 break
 
             imgUrl = data['results'][i]
